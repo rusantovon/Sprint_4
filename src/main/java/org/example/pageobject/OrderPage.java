@@ -12,7 +12,7 @@ public class OrderPage {
 
     private By orderButton1 = By.cssSelector(".Header_Nav__AGCXC .Button_Button__ra12g");
 
-    private By orderButton2 = By.cssSelector(".Button_Button__ra12g.Button_UltraBig__UU3Lp");
+    private By orderButton2 = By.cssSelector(".Button_Button__ra12g.Button_Middle__1CSJM");
 
     private By nameField = By.cssSelector(".Input_Input__1iN_Z[placeholder='* Имя']");
 

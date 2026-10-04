@@ -42,16 +42,16 @@ public class OrderTest {
         this.comment = comment;
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "Заказ клиента: {0} {1}")
     public static Object[][] getOrderData(){
         return new Object[][] {
-                {"Антон", "Русанов", "Кукуево 13", "Черкизовская", "+79184992533", "01.06.2005", "двое суток", "чёрный жемчуг", "лалала"},
-                {"Анна", "Кевлярова", "Луговая 23", "Красные Ворота", "+79182551610", "23.05.2023", "пятеро суток", "серая безысходность", "хахаха"}
+                {"Антон", "Русанов", "Кукуево 13", "Черкизовская", "+79184992533", "01.06.2027", "двое суток", "чёрный жемчуг", "лалала"},
+                {"Анна", "Кевлярова", "Луговая 23", "Красные Ворота", "+79182551610", "23.05.2027", "пятеро суток", "серая безысходность", "хахаха"}
         };
     }
 
     @Test
-    public void makeAnOrderThroughFirstButton() throws InterruptedException {
+    public void makeAnOrderThroughFirstButtonTest() throws InterruptedException {
         OrderPage orderPage = new OrderPage(factory.getDriver());
 
         orderPage.openSite();
@@ -66,7 +66,7 @@ public class OrderTest {
     }
 
     @Test
-    public void makeAnOrderThroughSecondButton() {
+    public void makeAnOrderThroughSecondButtonTest() {
         OrderPage orderPage = new OrderPage(factory.getDriver());
 
         orderPage.openSite();

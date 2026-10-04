@@ -21,7 +21,7 @@ public class FaqTest {
         this.expectedText = expectedText;
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "Вопрос: {0}")
     public static Object[][] getFaqData() {
         return new Object[][] {
                 {0, "Сутки — 400 рублей. Оплата курьеру — наличными или картой."},
@@ -36,7 +36,7 @@ public class FaqTest {
     }
 
     @Test
-    public void checkCorrectAnswers() throws InterruptedException {
+    public void checkCorrectAnswersTest() throws InterruptedException {
         MainPage mainPage = new MainPage(factory.getDriver());
 
         mainPage.openSite();
